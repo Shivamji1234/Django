@@ -1,0 +1,52 @@
+{% extends 'base.html' %} {% block title %}feedback{% endblock title %} {% block css %}
+<style>
+    .form-label {
+        position: relative;
+        bottom: -12px;
+        padding: 6px;
+    }
+    
+    body {
+        background-image: url("/static/banner.jpg"), linear-gradient(rgba(0, 255, 64, 0.5), rgba(51, 255, 0, 0.5));
+        background-position: center;
+    }
+    
+    #col {
+        color: black;
+        text-shadow: rgba(201, 223, 5, 0.795) 1px 0 10px;
+    }
+    
+    #colm {
+        text-shadow: rgba(30, 223, 5, 0.795) 1px 0 10px;
+    }
+    
+    #colo {
+        color: aqua;
+    }
+</style>
+{% endblock css %} {% block body %}
+
+<body class="center">
+    <div class="container" style="display: flex;justify-content: center;">
+        <form action="/feedback" method="POST" style="width: 570px;height: 200px;position: relative;bottom: -50px;">
+            {% csrf_token %}
+
+            <label for="name" id="name" class="form-label"><b id="col"> Name</b></label>
+            <input type="text" name="name" class="form-control" placeholder="abc" aria-label="Username" aria-describedby="addon-wrapping" required>
+
+
+
+            <label for="email" id="email" x class="form-label"><b id="col"> Email address</b></label>
+            <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required>
+
+
+
+            <label for="details" class="form-label"><b id="col">Do you have suggestions on what we can do to provide you with a better service?</b></label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" name="details" rows="3" placeholder="i like your website" required></textarea>
+
+
+            <button class="btn btn-success" style="width:120px" type="submit"><b id="col"> submit</b></button>
+        </form>
+    </div>
+</body>
+{% endblock body %}

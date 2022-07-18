@@ -1,0 +1,53 @@
+{% extends 'base.html' %} {% load static %} {% block link %}
+<link rel="stylesheet" type="text/css" href="{%static 'css/stylelogin.css'%}" /> {% endblock link %} {% block title %} login {% endblock title %} {% block mss %}
+<div class="box">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+      </symbol>
+      </svg> {% if messages %} {% for message in messages %}
+    <div class="alert alert-success d-flex align-items-center alert-dismissible fade show" role="alert" style="padding: 8px;">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="padding: 0px;position: relative;left: 99%;"></button>
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:" style="height: 15px;position: relative;bottom: -1px;"><use xlink:href="#check-circle-fill"/></svg>
+        <strong><b> {{ message }}</b></strong>
+    </div>
+    {% endfor %} {% endif %}
+</div>
+{% endblock mss %} {% block body %}
+
+<body>
+    <div class="shiv">
+        <div class="form-box1" id="box-height">
+            <div class="button-box1">
+                <div id="btn"></div>
+
+                <button type="button" class="toggle-btn1">login</button>
+
+
+                <a href=" registration1">
+                    <button type="button" class="toggle-btn1"> Register</button>
+                </a>
+
+
+
+
+            </div>
+            <form class="input-group1" id="log_in" action="login" method="POST">
+                {% csrf_token %}
+
+                <input type="text" class="input-field1" name="username" placeholder="username" required>
+                <input type="password" class="input-field1" name="password1" placeholder="password" required>
+                <input type="checkbox" class="check-box1"><span>Remember password</span>
+                <button type="submit" class="submit-btn1">login</button>
+            </form>
+
+
+
+
+
+
+        </div>
+    </div>
+</body>
+
+{% endblock body %}

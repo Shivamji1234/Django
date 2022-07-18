@@ -1,0 +1,103 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.shiv {
+    width: 100%;
+    background-image: url("/static/banner.jpg"), linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    background-position: center;
+    background-size: 10fr;
+    position: absolute;
+}
+
+.form-box1 {
+    width: 315px;
+    height: 594px;
+    position: relative;
+    margin: 6% auto;
+    background: #fff;
+    padding: 5px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.button-box1 {
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 8px #ff1f1f14;
+    border-radius: 30px;
+}
+
+.toggle-btn1 {
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    position: relative;
+}
+
+#btn {
+    top: 0;
+    left: 94px;
+    position: absolute;
+    width: 125px;
+    height: 100%;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.input-group1 {
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: 0.5;
+}
+
+.input-field1 {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+.check-box1 {
+    margin: 30px 10px 30px 0;
+    top: -19px;
+}
+
+.submit-btn1 {
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border: 0;
+    outline: 0;
+    border-radius: 30px;
+}
+
+span {
+    color: #777;
+    font-size: 12px;
+    bottom: 85px;
+}
+
+#login {
+    left: 20px;
+    top: 150px;
+}
+
+#Register {
+    left: 15px;
+    top: 105px;
+}

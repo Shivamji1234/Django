@@ -1,0 +1,44 @@
+ {% extends 'base.html' %} {% load static %} {% block link %}
+<link rel="stylesheet" type="text/css" href="{%static 'css/styleREG.css'%}" /> {% endblock link %} {% block title %} Registration {% endblock title %} {% block body %}
+
+<body>
+    <div class="shiv">
+        <div class="form-box1" id="box-height">
+            <div class="button-box1">
+                <div id="btn"></div>
+                <a href="{%url 'login'%}">
+
+                    <button type="button" class="toggle-btn1" onclick="login()">login</button>
+                </a>
+
+
+                <button type="button" class="toggle-btn1" onclick="Register()">Register</button>
+
+
+
+
+            </div>
+            <form class="input-group1" id="Register" action="registration1" method="POST" style="height: 593px;">
+                {% csrf_token %}
+
+                <input type="text" class="input-field1" name="username" placeholder="Username" required>
+                <input type="text" class="input-field1" name="first_name" placeholder="first name" required>
+                <input type="text" class="input-field1" name="last_name" placeholder="last name" required>
+                <input type="email" class="input-field1" name="email_id" placeholder="email id" required>
+                <input type="password" class="input-field1" name="password1" placeholder="password" required>
+
+                <input type="password" class="input-field1" name="password2" placeholder="confirm password" required>
+                <input type="checkbox" class="check-box1"><span>Remember password</span>
+                <button type="submit" class="submit-btn1" value="submit">Register</button>
+            </form>
+
+
+
+
+
+
+        </div>
+    </div>
+</body>
+
+{% endblock body %}
